@@ -1,10 +1,7 @@
+import os
 
+# Read from environment
+api_key = os.environ.get('API_KEY')
+database = os.environ.get('DATABASE_NAME', 'default.db')
 
-#function
-def calculate_total(quantity, price):
-    """Calculate total for a single item"""
-    return quantity * price
-
-def format_currency(amount):
-    """Format number as currency"""
-    return f"${amount:,.2f}"
+print(f"Using database: {database}")
